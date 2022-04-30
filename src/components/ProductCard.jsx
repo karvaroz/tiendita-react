@@ -1,16 +1,18 @@
-import React from 'react'
+import React from "react";
 import "../styles/ProductCartStyle.css";
 
-const ProductCard = () => {
+const ProductCard = ({ name, price, discount, image, id }) => {
   return (
-    <div className="product_card">
-      <p className="product_discount">32% dto.</p>
-      <img src="/assets/ofertas/limon.png" alt="product" />
-      <p className="product_price">$26.82/kg <span className="product_price_before">$39.9kg</span></p>
-      <p>Limon con semilla</p>
+    <div className="product_card" id={id}>
+      <p className="product_discount">{discount} % dto.</p>
+      <img src={image} alt="product" />
+      <p className="product_price">
+        ${price}/kg <span className="product_price_before">$39.9kg</span>
+      </p>
+      <p>{name}</p>
       <button className="product_btn">Agregar</button>
     </div>
-  )
-}
+  );
+};
 
-export default ProductCard
+export default ProductCard;

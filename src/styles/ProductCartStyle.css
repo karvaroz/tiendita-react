@@ -5,7 +5,7 @@
   padding: 0px;
   position: static;
   width: 194px;
-  height: 418px;
+  height: auto;
   margin-right: 10px;
 }
 
@@ -29,7 +29,7 @@
 
 .product_price_before {
   color: #b8b4b4;
-  text-decoration-line: line-through;
+  /* text-decoration-line: line-through; */
 }
 
 .product_btn{
