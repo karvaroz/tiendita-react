@@ -17,8 +17,8 @@ const ProductList = () => {
     <>
       {ofertasData !== null ? (
         <div className="product_list_box">
-          {ofertasData.map((product) => (
-            <ProductCard key={product.id} {...product} />
+          {ofertasData.map((item) => (
+            <ProductCard key={item.id} item={item} />
           ))}
         </div>
       ) : (
@@ -27,8 +27,8 @@ const ProductList = () => {
 
       {popularesData !== null ? (
         <div className="product_list_box">
-          {popularesData.map((prod) => (
-            <ProductCard2 key={prod.id} {...prod} />
+          {popularesData.map((item) => (
+            <ProductCard2 key={item.id} item={item} />
           ))}
         </div>
       ) : (
