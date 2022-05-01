@@ -15,7 +15,7 @@ export const CartProvider = ({ children }) => {
   useEffect(() => {
     localStorage.setItem("cartProducts", JSON.stringify(cartItems));
     console.clear();
-    console.log(cartItems)
+    console.log(cartItems);
   }, [cartItems]);
 
   const addItemToCart = (product) => {
@@ -44,7 +44,7 @@ export const CartProvider = ({ children }) => {
       cartItems.filter((productInCart) => productInCart.id !== product.id);
     } else {
       setCartItems(
-        cartItems((productInCart) => {
+        cartItems.map((productInCart) => {
           if (productInCart.id === product.id) {
             return { ...inCart, quantity: inCart.quantity - 1 };
           } else return productInCart;
