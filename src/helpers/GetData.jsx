@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const URL_API = "http://la-tiendita.herokuapp.com/";
+const URL_API = "https://la-tiendita.herokuapp.com/";
 
 const ofertas = async (state) => {
   const request = await axios.get(
